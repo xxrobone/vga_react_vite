@@ -8,13 +8,11 @@ import './ItemCard.scss'
 
 export default function Itemcard({ item }) {
   
-  const { name, rating, metacritic, parent_platforms, background_image, id } = item
-
-  console.log(parent_platforms)
+    const { name, rating, metacritic, parent_platforms, background_image } = item
+    
   
-  /* console.log(item) */
   return (  
-      <li className="item_card item_card_front" key={id}>
+      <li className="item_card item_card_front">
           <img src={background_image} alt={name} className='game_img' />
           <h2>{name}</h2>
           <div className="item_info">
@@ -24,8 +22,7 @@ export default function Itemcard({ item }) {
           <div className='item_platforms'>
                   {parent_platforms.map(p => 
                   (
-                    <>
-                     <span key={Math.random() * 123}>{p.platform.name 
+                     <span key={p.platform.id}>{p.platform.name 
                     ?
                      (p.platform.name === 'PC' ? <RiWindowsFill /> : null
                     ||  p.platform.name === 'PlayStation' ? <RiPlaystationLine /> : null
@@ -37,7 +34,6 @@ export default function Itemcard({ item }) {
                     || p.platform.name === 'iOS' ? <RiAppleFill /> : null
                     )   : p.platform.name          
                     }</span>
-                    </>
                   ))}
           </div>
               </div>

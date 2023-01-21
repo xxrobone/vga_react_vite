@@ -6,12 +6,11 @@ import ItemCard from '../item/ItemCard'
 export default function ItemList({ data }) {
     
     if (!data) return (<div>no data</div>)
-
-    console.log(data.results)
+console.log(data)
   return (
       <ul className="items_list">
-          {data.map((item) => (
-              <ItemCard item={item} />              
+          {data.map((item) => (              
+                  <ItemCard item={item} key={item.id} />          
           ) )
           }
         
