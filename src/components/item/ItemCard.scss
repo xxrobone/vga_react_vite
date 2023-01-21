@@ -90,8 +90,11 @@ transform: scale(1);
 }
 
 .item_info .item_platforms {
+  margin: 0 auto;
   width: 100%;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.25rem 0rem;
 
   svg {
