@@ -1,7 +1,60 @@
-#root {
-  max-width: 1280px;
+
+body {
+  background-color: var(--color-bg);
+  color: #262626;
   width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
+
+h1 {
+  font-size: clamp(1.4rem, 2vw, 3rem);
+}
+
+i,
+.fa-solid,
+.fa-brands {
+  height: 24px;
+  width: 24px;
+  font-size: clamp(0.8rem, 1.5vw, 1rem); 
+}
+
+main {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(to bottom right, rgba(0,0,0,.125, orange));
+}
+
+.buttons_wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.fetch_btn {
+  margin: 0.2rem auto;
+  padding: 1rem 2rem;
+  width: 40%;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.6rem;
+}
+
+.fetch_btn:hover {
+  background-color: #282828;
+  color: #fafafa;
+}
+
+.mustplay_btn:hover {
+  background-color: transparent;
+  background: linear-gradient(120deg, red, tomato);
+  color: red;
+  text-shadow:  -1px -1px 1px black;
+}
+

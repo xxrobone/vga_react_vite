@@ -1,0 +1,24 @@
+.logo {
+    margin-left: 1rem;
+    position: relative;
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    object-position: center;
+   
+}
+
+.svg_logo {
+    position: relative;
+    min-width: 100px;
+}
+
+.svg_logo path:nth-child(1) {
+    fill: #784B84;
+}
+.svg_logo path:nth-child(2) {
+    fill: #6c63fe;
+}
+.svg_logo path:nth-child(3) {
+    fill: #fafafa;
+}
